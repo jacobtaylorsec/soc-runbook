@@ -75,6 +75,11 @@ Block the attacker IP address using UFW:
 sudo ufw deny from 192.168.100.20 to any port 22
 sudo ufw status numbered
 ```
+
+**Firewall rule blocking attacker IP:**
+
+![UFW Block](../screenshots/ssh_bruteforce/08_ufw_block.png)
+
 ## 6. Recovery
 
 If a legitimate user is mistakenly blocked (false positive), remove the firewall rule:
