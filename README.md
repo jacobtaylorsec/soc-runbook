@@ -16,12 +16,12 @@ Each playbook now includes **metrics (MTTD/MTTR), SOC tickets, knowledge base en
 
 ## Table of Contents
 
-| Playbook | Description |
-|----------|-------------|
-| [SSH Brute Force](playbooks/ssh_bruteforce.md) | Detection and response to SSH brute force attempts using Splunk and UFW |
-| [Phishing](playbooks/phishing.md) | Analysis and containment of a phishing campaign with header review and user communication templates |
-| [Malware](playbooks/malware.md) | Investigation of malware execution on a Windows endpoint using Defender AV/EDR |
-| [Cloud / AWS Security](playbooks/cloud.md) | Detection and containment of suspicious AWS console login attempts with CloudTrail and CloudWatch |
+| Playbook | Markdown | PDF |
+|----------|----------|-----|
+| SSH Brute Force | [View](playbooks/ssh_bruteforce.md) | [Download](pdfs/ssh_bruteforce.pdf) |
+| Phishing | [View](playbooks/phishing.md) | [Download](pdfs/phishing.pdf) |
+| Malware | [View](playbooks/malware.md) | [Download](pdfs/malware.pdf) |
+| Cloud / AWS Security | [View](playbooks/cloud.md) | [Download](pdfs/cloud.pdf) |
 
 ---
 
@@ -50,17 +50,22 @@ Each playbook now includes **metrics (MTTD/MTTR), SOC tickets, knowledge base en
 
 ```
 soc-runbook/
-├── playbooks/             # Markdown playbooks
-│   ├── ssh_bruteforce.md
-│   ├── phishing.md
-│   ├── malware.md
-│   └── cloud.md
-├── screenshots/           # Supporting images for playbooks
-│   ├── ssh_bruteforce/
-│   ├── phishing/
-│   ├── malware/
-│   └── cloud/
-└── README.md              # Main repository overview
+├── playbooks/ # Markdown playbooks (with screenshots inline)
+│ ├── ssh_bruteforce.md
+│ ├── phishing.md
+│ ├── malware.md
+│ └── cloud.md
+├── screenshots/ # Supporting images for playbooks
+│ ├── ssh_bruteforce/
+│ ├── phishing/
+│ ├── malware/
+│ └── cloud/
+├── pdfs/ # Clean PDF exports (no screenshots)
+│ ├── ssh_bruteforce.pdf
+│ ├── phishing.pdf
+│ ├── malware.pdf
+│ └── cloud.pdf
+└── README.md # Main repository overview
 ```
 
 ---
