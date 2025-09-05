@@ -18,10 +18,11 @@ Each playbook now includes **metrics (MTTD/MTTR), SOC tickets, knowledge base en
 
 | Playbook | Markdown | PDF |
 |----------|----------|-----|
-| SSH Brute Force | [View](playbooks/ssh_bruteforce.md) | [Download](pdfs/ssh_bruteforce.pdf) |
-| Phishing | [View](playbooks/phishing.md) | [Download](pdfs/phishing.pdf) |
-| Malware | [View](playbooks/malware.md) | [Download](pdfs/malware.pdf) |
-| Cloud / AWS Security | [View](playbooks/cloud.md) | [Download](pdfs/cloud.pdf) |
+| SSH Brute Force | [View](playbooks/ssh_bruteforce.md) | [Download](pdfs/ssh_bruteforce_noscreens.pdf) |
+| Phishing | [View](playbooks/phishing.md) | [Download](pdfs/phishing_noscreens.pdf) |
+| Malware | [View](playbooks/malware.md) | [Download](pdfs/malware_noscreens.pdf) |
+| Cloud / AWS Security | [View](playbooks/cloud.md) | [Download](pdfs/cloud_noscreens.pdf) |
+
 
 ---
 
