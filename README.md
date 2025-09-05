@@ -62,10 +62,10 @@ soc-runbook/
 │ ├── malware/
 │ └── cloud/
 ├── pdfs/ # Clean PDF exports (no screenshots)
-│ ├── ssh_bruteforce.pdf
-│ ├── phishing.pdf
-│ ├── malware.pdf
-│ └── cloud.pdf
+│ ├── ssh_bruteforce_noscreens.pdf
+│ ├── phishing_noscreens.pdf
+│ ├── malware_noscreens.pdf
+│ └── cloud_noscreens.pdf
 └── README.md # Main repository overview
 ```
 
