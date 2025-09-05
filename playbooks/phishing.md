@@ -187,3 +187,11 @@ A phishing campaign impersonating Microsoft used an urgent subject (“Verify yo
 On **September 5, 2025**, the SOC investigated a phishing campaign impersonating Microsoft with the subject line *“Verify your password immediately.”* The attack targeted 24 users, of which 19 received the message. One user clicked the link and entered credentials. Immediate containment included blocking the sender domain, quarantining all matching emails, and resetting the impacted user’s credentials. Recovery actions included inbox cleanup, verification of mailbox rules, and user notifications.
 
 The incident was contained with no evidence of compromise beyond the single credential reset. **Business impact was minimal**, and no systems or sensitive data were breached. The quick reporting by four employees reduced the time-to-detection, demonstrating the effectiveness of user awareness training. Lessons learned highlight the need for **DMARC enforcement** and continuous phishing awareness. This incident reinforces the SOC’s ability to detect, contain, and remediate credential-harvesting attempts while providing assurance to leadership that business risk was minimized and response procedures are effective.
+
+---
+
+## 13. References
+- [NIST 800-61: Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)  
+- [CISA Phishing Guidance](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks)  
+- [Microsoft Security Documentation – Phishing Protection](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/anti-phishing-protection)  
+- [VirusTotal Documentation](https://support.virustotal.com/hc/en-us)  
