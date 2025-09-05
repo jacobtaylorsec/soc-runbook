@@ -44,12 +44,12 @@ It is intended for Tier 1–2 SOC analysts monitoring Linux servers with Splunk 
 
 ```mermaid
 flowchart TD
-  A[Multiple SSH failed logins detected] --> B{≥10 failures in 5 min from 1 IP?}
+  A[Multiple SSH failed logins detected] --> B{>=10 failures in 5 min from 1 IP?}
   B -- Yes --> C[Trigger Splunk alert; validate source IP]
   B -- No --> D[Continue monitoring; no action]
-  C --> E{Source IP external/untrusted?}
+  C --> E{Source IP external or untrusted?}
   E -- Yes --> F[Escalate to Tier 2; block via UFW]
-  E -- No --> G[Check if false positive (internal admin?)]
+  E -- No --> G[Check if false positive e.g. internal admin]
   G -- Yes --> H[Whitelist and document]
   G -- No --> F
   F --> I[Document ticket; notify system owner]
