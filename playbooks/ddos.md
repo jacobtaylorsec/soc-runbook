@@ -31,7 +31,7 @@ Audience: Tier 1–2 SOC analysts, with escalation to Tier 3/Infra/Network teams
   ![Request Breakdown](../screenshots/ddos/02_request_breakdown.png)
 
 - **SPL Query Results:**  
-  ![SPL Results](../screenshots/ddos/03_spl_results.png)
+  ![SPL Results](../screenshots/ddos/03_ddos_spl_results.png)
 
 - **Raw Apache Logs:**  
   ![Raw Logs](../screenshots/ddos/04_raw_logs.png)
@@ -40,14 +40,14 @@ Audience: Tier 1–2 SOC analysts, with escalation to Tier 3/Infra/Network teams
 
 ```mermaid
 flowchart TD
-  A[Traffic spike detected in Splunk] --> B{Top IPs identified?}
-  B -- Yes --> C[Check logs for repeated GETs /index.html]
-  B -- No --> D[Continue monitoring / escalate]
-  C --> E{Flood confirmed?}
-  E -- Yes --> F[Containment actions (UFW, mod_evasive)]
-  E -- No --> G[Document & close as benign]
-  F --> H[Escalate to Tier 2/Infra if traffic persists]
-  H --> I[Update SOC ticket and notify stakeholders]
+  A["Traffic spike detected in Splunk"] --> B{"Top IPs identified?"}
+  B -- Yes --> C["Check logs for repeated GETs to \/index.html"]
+  B -- No  --> D["Continue monitoring / escalate"]
+  C --> E{"Flood confirmed?"}
+  E -- Yes --> F["Containment actions:\nUFW blocks + mod_evasive"]
+  E -- No  --> G["Document and close as benign"]
+  F --> H["Escalate to Tier 2 / Infra if persists"]
+  H --> I["Update SOC ticket and notify stakeholders"]
   ```
 
   ---
