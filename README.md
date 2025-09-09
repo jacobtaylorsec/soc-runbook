@@ -2,15 +2,16 @@
 
 ## Overview
 This repository contains a collection of **SOC analyst incident response playbooks**, each designed and executed in a controlled lab environment.  
-Every playbook demonstrates end-to-end handling of security incidents — from **detection and alerting** through **containment, recovery, and executive reporting**.  
+Every playbook demonstrates end-to-end handling of security incidents — from **detection and alerting** through **containment, recovery, and executive reporting**.
 
-The goal is to provide practical, hands-on examples of **security monitoring and incident response workflows** across multiple domains:  
+The goal is to provide practical, hands-on examples of **security monitoring and incident response workflows** across multiple domains:
 - **Endpoint Security:** SSH brute force, Windows malware execution  
 - **Email Security:** Phishing and credential harvesting  
 - **Cloud Security:** AWS IAM / CloudTrail / CloudWatch login abuse  
+- **Network / Application Security:** **DDoS / Apache HTTP flood** (UFW blocks, Apache `mod_evasive` rate limiting, Splunk dashboards)
 
-All screenshots were generated in lab environments I configured (Splunk, Windows Defender, AWS CloudTrail/CloudWatch).  
-Each playbook now includes **metrics (MTTD/MTTR), SOC tickets, knowledge base entries, and leadership-ready executive summaries**.
+All screenshots were generated in lab environments I configured (Splunk, Windows Defender, AWS CloudTrail/CloudWatch, Apache web server).  
+Each playbook includes **metrics (MTTD/MTTR), SOC tickets, knowledge base entries, and leadership-ready executive summaries**.
 
 ---
 
@@ -22,6 +23,8 @@ Each playbook now includes **metrics (MTTD/MTTR), SOC tickets, knowledge base en
 | Phishing | [View](playbooks/phishing.md) | [Download](pdfs/phishing_noscreens.pdf) |
 | Malware | [View](playbooks/malware.md) | [Download](pdfs/malware_noscreens.pdf) |
 | Cloud / AWS Security | [View](playbooks/cloud.md) | [Download](pdfs/cloud_noscreens.pdf) |
+| DDoS / Apache HTTP Flood | [View](playbooks/ddos.md) | [Download](pdfs/ddos_noscreens.pdf) |
+
 
 
 ---
@@ -55,17 +58,20 @@ soc-runbook/
 │ ├── ssh_bruteforce.md
 │ ├── phishing.md
 │ ├── malware.md
-│ └── cloud.md
+│ ├── cloud.md
+│ └── ddos.md
 ├── screenshots/ # Supporting images for playbooks
 │ ├── ssh_bruteforce/
 │ ├── phishing/
 │ ├── malware/
-│ └── cloud/
+│ ├── cloud/
+│ └── ddos/
 ├── pdfs/ # Clean PDF exports (no screenshots)
 │ ├── ssh_bruteforce_noscreens.pdf
 │ ├── phishing_noscreens.pdf
 │ ├── malware_noscreens.pdf
-│ └── cloud_noscreens.pdf
+│ ├── cloud_noscreens.pdf
+│ └── ddos_noscreens.pdf
 └── README.md # Main repository overview
 ```
 
@@ -77,4 +83,5 @@ soc-runbook/
 - [AWS IAM Security Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)  
 - [Microsoft Security Documentation](https://learn.microsoft.com/en-us/windows/security/threat-protection/)  
 - [CISA Phishing Guidance](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks)  
+- [Apache mod_evasive Documentation](https://httpd.apache.org/docs/2.4/mod/mod_evasive.html)   
 
