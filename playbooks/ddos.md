@@ -41,10 +41,10 @@ Audience: Tier 1–2 SOC analysts, with escalation to Tier 3/Infra/Network teams
 ```mermaid
 flowchart TD
   A["Traffic spike detected in Splunk"] --> B{"Top IPs identified?"}
-  B -- Yes --> C["Check logs for repeated GETs to \/index.html"]
+  B -- Yes --> C["Check logs for repeated GETs to /index.html"]
   B -- No  --> D["Continue monitoring / escalate"]
   C --> E{"Flood confirmed?"}
-  E -- Yes --> F["Containment actions:\nUFW blocks + mod_evasive"]
+  E -- Yes --> F["Containment actions\nUFW blocks + mod_evasive"]
   E -- No  --> G["Document and close as benign"]
   F --> H["Escalate to Tier 2 / Infra if persists"]
   H --> I["Update SOC ticket and notify stakeholders"]
@@ -206,3 +206,15 @@ The incident was contained with **no evidence of data compromise**, but availabi
 - [CISA DDoS Guidance](https://www.cisa.gov/resources-tools/resources/understanding-ddos-attacks)  
 - [Apache mod_evasive Documentation](https://httpd.apache.org/docs/2.4/mod/mod_evasive.html)  
 - [UFW (Uncomplicated Firewall) Documentation](https://help.ubuntu.com/community/UFW)  
+
+---
+
+## Disclaimer
+
+All IP addresses, hostnames, and geographic references in this playbook are **fictitious and generated solely for lab simulation purposes**.  
+This project was conducted entirely within a **controlled homelab environment** with no impact to external systems, networks, or services.  
+
+The purpose of this playbook is strictly **educational and demonstrative**, showcasing defensive detection, analysis, containment, and recovery practices for a simulated DDoS attack.  
+No offensive attack techniques are disclosed or promoted, and no unlawful activity was performed.  
+
+Use of this material should be limited to **authorized training, academic, or portfolio demonstration**. Real-world use of denial-of-service techniques without explicit permission is illegal and may result in severe legal consequences.  
