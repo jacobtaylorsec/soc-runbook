@@ -74,15 +74,15 @@ flowchart TD
 
 ---
 
-## 7. Timeline & Escalation (Example from this incident)
+## 7. Timeline & Escalation
 
 **Timeline**  
 - 12:35 AM – Traffic spike begins (first surge of GET requests detected in Splunk)  
 - 12:40 AM – SOC investigation started (Tier 1 review of dashboards & SPL queries)  
+- 12:41 AM – Server becomes unresponsive (downtime begins)  
 - 12:44 AM – Containment: UFW block applied against attacker IP (192.168.100.20)  
-- 12:46 AM – Containment: Apache `mod_evasive` enabled and configured for rate limiting  
-- 12:47 AM – Raw Apache logs confirm continued attempts from multiple IPs (flooding behavior)  
-- 01:00 AM – Recovery validation: traffic normalized, server stable  
+- 12:46 AM – Containment: Apache mod_evasive enabled and configured for rate limiting  
+- 01:00 AM – Recovery validation: traffic normalized, server stable (downtime ends)   
 
 **Escalation Path**  
 - **Tier 1:** Detect anomaly via Splunk dashboard, run SPL queries, confirm log evidence  
@@ -164,10 +164,10 @@ The Apache web server experienced a high-volume HTTP flood generating ~300,000 G
 **Timeline**  
 - 12:35 AM – Spike in traffic detected (Splunk dashboard)  
 - 12:40 AM – Tier 1 SOC investigation initiated  
+- 12:41 AM – Server confirmed unresponsive (downtime begins)  
 - 12:44 AM – Containment: UFW block applied to attacker IPs  
 - 12:46 AM – Apache `mod_evasive` enabled for rate limiting  
-- 12:47 AM – Server confirmed unresponsive (downtime begins)  
-- 01:00 AM – Traffic normalized; service restored; protections validated  
+- 01:00 AM – Traffic normalized; service restored; protections validated (downtime ends)  
 
 **Impact**  
 - Web server offline for ~20 minutes  
